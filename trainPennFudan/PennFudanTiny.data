@@ -1,0 +1,5 @@
+classes= 1  
+train  = images/train.list  
+valid  = images/test.list  
+names = images/PennFudan.names  
+backup = backupTiny/
