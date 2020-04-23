@@ -1,7 +1,10 @@
 # yolov3-custom-pedestrian-detection
 
 ## PennFudanAugmentation
-Reference: https://www.cis.upenn.edu/~jshi/ped_html/
+Darknet yolo: https://pjreddie.com/darknet/yolo/
+<br/>
+Dataset: https://www.cis.upenn.edu/~jshi/ped_html/ 
+<br/>
 The data set contains only 170 samples, so we argument the data set 
 by scaling or cropping each image.
 1)genImageBoxLabel
