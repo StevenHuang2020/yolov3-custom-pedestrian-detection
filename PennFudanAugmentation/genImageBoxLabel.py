@@ -2,8 +2,8 @@
 #10/04/2020 Penn-Fudan dataset generate box label from raw label
 
 #yolo annotation fmt
-#<object-class> <x> <y> <width> <height>
-#<object-class> <Xmin/width> <Ymin/height> <(Xmax-Xmin)/width> <(Ymax-Ymin)/height>
+#<object-class> <xCenter> <yCenter> <width> <height>
+#<object-class> <(Xmin+Xmax)*0.5/width> <(Ymin+Ymax)*0.5/height> <(Xmax-Xmin)/width> <(Ymax-Ymin)/height>
 #1 0.716797 0.395833 0.216406 0.147222
 #0 0.687109 0.379167 0.255469 0.158333
 #1 0.420312 0.395833 0.140625 0.166667
@@ -54,9 +54,9 @@ def getImgAnnotFile(annotPath,file):
         
 def writeToAnnotFile(H,W,file,coordinates):
     for i in coordinates:
-            #print(i)
+            #print(i,'H,W=',H,W)
             Xmin,Ymin,Xmax,Ymax = i
-            x,y,w,h = Xmin,Ymin,Xmax-Xmin,Ymax-Ymin
+            x,y,w,h = (Xmin+Xmax)/2, (Ymin+Ymax)/2, Xmax-Xmin, Ymax-Ymin
             dstLine = '0 '+ str(x/W) + ' ' + str(y/H) + ' ' + str(w/W) + ' ' + str(h/H)
             writeToDst(file,dstLine + '\n') 
             

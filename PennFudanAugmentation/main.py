@@ -23,8 +23,6 @@ def clipImgCoordinate(img,clipCoordinate,coordinates):
         newCoordinates.append((Xmin-clipCoordinate[0],Ymin-clipCoordinate[1],Xmax-clipCoordinate[0],Ymax-clipCoordinate[1]))
     return clipImg,newCoordinates
 
-    return clipImg
-
 def rectangleImg(img,startPt,stopPt):
     color = (0, 0, 255) 
     thickness=2

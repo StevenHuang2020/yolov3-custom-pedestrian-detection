@@ -31,7 +31,12 @@ def getCoordinatesFromLabels(H,W,fileLabel):
             clas,x,y,w,h = i.split()
             x,y,w,h = float(x),float(y),float(w),float(h)
             #print(x,y,w,h,H,W)
-            Xmin,Ymin,Xmax,Ymax = int(x*W), int(y*H), int(x*W) + int(w*W), int(y*H + h*H)
+            #Xmin,Ymin,Xmax,Ymax = int(x*W), int(y*H), int(x*W) + int(w*W), int(y*H + h*H)
+            xCenter,yCenter,weight,height = x*W, y*H, w*W, h*H
+            Xmin = int(xCenter - weight*0.5)
+            Ymin = int(yCenter - height*0.5)
+            Xmax = int(xCenter + weight*0.5)
+            Ymax = int(yCenter + height*0.5)
             #print('i=',i,'cod:',Xmin,Ymin,Xmax,Ymax)
             coords.append((Xmin,Ymin,Xmax,Ymax))
     return coords
@@ -67,8 +72,27 @@ def main():
     base = r'.\res\PennFudanPed\\'
     imgPath = base + 'test_PNGImages'
     LabelPath = base + r'labels\\test_PNGImages'
+    dstRecImgPath = base + r'test'
     
-    dstRecImgPath = base + 'test'
+    '''
+    base = r'E:\python\AI\yolo\darknet-master\trainPennFudan\\'
+    imgPath = base + r'images\\test_PNGImages'
+    LabelPath = base + r'labels\\test_PNGImages'
+    dstRecImgPath = base + r'images\\test'
+    '''
+    
+    '''
+    base = r'.\res\PennFudanPed\\'
+    imgPath = base + 'PNGImages'
+    LabelPath = base + r'Label'
+    dstRecImgPath = base + r'testRaw'
+    '''
+    '''
+    base = r'.\res\PennFudanPed\\'
+    imgPath = base + 'NewImagesScale'
+    LabelPath = base + 'NewImagesScaleLabel'
+    dstRecImgPath = base + r'testClip'
+    '''
     testFileLabel(imgPath,LabelPath,dstRecImgPath)
            
 if __name__ == '__main__':

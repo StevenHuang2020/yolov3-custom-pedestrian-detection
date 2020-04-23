@@ -25,10 +25,11 @@ def train_test_split(srcPath,label,dstTrainPath,dstTestPath,dstTrainLabels,dstTe
             copyFile(fAnnot,dstTestLabels + '\\')
 
 def main():    
-    dstTrainPath = r'.\res\PennFudanPed\train_PNGImages'
-    dstTestPath = r'.\res\PennFudanPed\test_PNGImages'
-    dstTrainLabels =  r'.\res\PennFudanPed\labels\train_PNGImages'
-    dstTestLabels =  r'.\res\PennFudanPed\labels\test_PNGImages'
+    base = r'.\res\PennFudanPed\\'
+    dstTrainPath = base + 'train_PNGImages'
+    dstTestPath = base + 'test_PNGImages'
+    dstTrainLabels =  base + 'labels\train_PNGImages'
+    dstTestLabels =  base + 'labels\test_PNGImages'
     
     deleteFolder(dstTrainPath)
     createPath(dstTrainPath)
@@ -41,21 +42,13 @@ def main():
     
     imgPathList=[]
     imgPathList.append((r'.\res\PennFudanPed\PNGImages',r'.\res\PennFudanPed\Label'))
-    imgPathList.append((r'.\res\PennFudanPed\NewImagesClip',r'.\res\PennFudanPed\NewImagesClipLabel'))
-    imgPathList.append((r'.\res\PennFudanPed\NewImagesScale',r'.\res\PennFudanPed\NewImagesScaleLabel'))
+    #imgPathList.append((r'.\res\PennFudanPed\NewImagesClip',r'.\res\PennFudanPed\NewImagesClipLabel'))
+    #imgPathList.append((r'.\res\PennFudanPed\NewImagesScale',r'.\res\PennFudanPed\NewImagesScaleLabel'))
     
     for i in imgPathList:
         imgPath = i[0]
         label = i[1]
         train_test_split(imgPath,label,dstTrainPath,dstTestPath,dstTrainLabels,dstTestLabels,test_size=0.2)
-    
-    # imgPath = r'.\res\PennFudanPed\NewImagesClip'
-    # label = r'.\res\PennFudanPed\NewImagesClipLabel'
-    # train_test_split(imgPath,label,dstTrainPath,dstTestPath,dstTrainLabels,dstTestLabels,test_size=testSize)
-    
-    # imgPath = r'.\res\PennFudanPed\NewImagesScale'
-    # label = r'.\res\PennFudanPed\NewImagesScaleLabel'
-    # train_test_split(imgPath,label,dstTrainPath,dstTestPath,dstTrainLabels,dstTestLabels,test_size=testSize)
     
     
 if __name__=='__main__':
