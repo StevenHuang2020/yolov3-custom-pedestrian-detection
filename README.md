@@ -1,4 +1,4 @@
-# yolov3-custom-pedestrian-detection
+# Yolov3-custom-pedestrian-detection
 
 ## PennFudanAugmentation
 Darknet yolo: https://pjreddie.com/darknet/yolo/
