@@ -25,11 +25,12 @@ def train_test_split(srcPath,label,dstTrainPath,dstTestPath,dstTrainLabels,dstTe
             copyFile(fAnnot,dstTestLabels + '\\')
 
 def main():    
+    #base = r'.\res\PennFudanPed\trainEx\\'
     base = r'.\res\PennFudanPed\\'
-    dstTrainPath = base + 'train_PNGImages'
-    dstTestPath = base + 'test_PNGImages'
-    dstTrainLabels =  base + 'labels\train_PNGImages'
-    dstTestLabels =  base + 'labels\test_PNGImages'
+    dstTrainPath = base + r'train_PNGImages'
+    dstTestPath = base + r'test_PNGImages'
+    dstTrainLabels =  base + r'labels\train_PNGImages'
+    dstTestLabels =  base + r'labels\test_PNGImages'
     
     deleteFolder(dstTrainPath)
     createPath(dstTrainPath)

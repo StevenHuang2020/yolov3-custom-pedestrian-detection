@@ -69,31 +69,14 @@ def testFileLabel(imgPath,LabelPath,dstRecImgPath):
     
 
 def main():
+    
+    #base = r'.\res\PennFudanPed\trainEx\\'
     base = r'.\res\PennFudanPed\\'
     imgPath = base + 'test_PNGImages'
     LabelPath = base + r'labels\\test_PNGImages'
     dstRecImgPath = base + r'test'
-    
-    '''
-    base = r'E:\python\AI\yolo\darknet-master\trainPennFudan\\'
-    imgPath = base + r'images\\test_PNGImages'
-    LabelPath = base + r'labels\\test_PNGImages'
-    dstRecImgPath = base + r'images\\test'
-    '''
-    
-    '''
-    base = r'.\res\PennFudanPed\\'
-    imgPath = base + 'PNGImages'
-    LabelPath = base + r'Label'
-    dstRecImgPath = base + r'testRaw'
-    '''
-    '''
-    base = r'.\res\PennFudanPed\\'
-    imgPath = base + 'NewImagesScale'
-    LabelPath = base + 'NewImagesScaleLabel'
-    dstRecImgPath = base + r'testClip'
-    '''
-    testFileLabel(imgPath,LabelPath,dstRecImgPath)
+        
+	testFileLabel(imgPath,LabelPath,dstRecImgPath)
            
 if __name__ == '__main__':
     main()
