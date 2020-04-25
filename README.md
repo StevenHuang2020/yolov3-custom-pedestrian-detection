@@ -17,11 +17,11 @@ by scaling or cropping each image.
 4)main: Main function to argument the image set by scaling and cropping method.
 
 <br/>
-Dataset description before augmentation.
+Dataset description before augmentation(170 sample images).
 <br/>
 <img src="res/dataset.png" width="320" height="240">
 <br/>
-Dataset description after augmentation.
+Dataset description after augmentation(5270 sample images).
 <br/>
 <img src="res/datasetAug.png" width="320" height="240">
 
