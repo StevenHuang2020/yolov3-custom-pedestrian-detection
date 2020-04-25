@@ -16,6 +16,15 @@ by scaling or cropping each image.
 <br/>
 4)main: Main function to argument the image set by scaling and cropping method.
 
+<br/>
+Dataset description before augmentation.
+<br/>
+<img src="res/dataset.png" width="320" height="240">
+<br/>
+Dataset description after augmentation.
+<br/>
+<img src="res/datasetAug.png" width="320" height="240">
+
 ## trainPennFudan
 Darknet config files for training.
 
