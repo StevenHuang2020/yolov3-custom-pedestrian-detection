@@ -18,3 +18,10 @@ by scaling or cropping each image.
 
 ## trainPennFudan
 Darknet config files for training.
+
+## Detection effect 
+<br/>
+<img src="res/pd.png" width="320" height="240">
+<img src="res/pd_detect.png" width="320" height="240">
+<img src="res/pd2.png" width="320" height="240">
+<img src="res/pd2_detect.png" width="320" height="240">
