@@ -1,0 +1,5 @@
+python yolo_opencv.py -c ./trainPennFudan/PF_yolov3-tiny.cfg -w ./PF_yolov3-tiny_30000.weights -cl ./trainPennFudan/images/PennFudan.names -i ./res/pd.png
+
+python yolo_opencv.py -c ./trainPennFudan/PF_yolov3-tiny.cfg -w ./PF_yolov3-tiny_30000.weights -cl ./trainPennFudan/images/PennFudan.names -i ./res/pd.png -s ./res/pd_dectect.png
+
+python yolo_opencv.py --config ./trainPennFudan/PF_yolov3-tiny.cfg --weights ./PF_yolov3-tiny_30000.weights --class ./trainPennFudan/images/PennFudan.names --image ./res/pd.png -s ./res/pd_dectect.png
