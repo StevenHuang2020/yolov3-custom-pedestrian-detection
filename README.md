@@ -37,5 +37,5 @@ Darknet config files for training.
 
 ![Last update](https://img.shields.io/endpoint?color=blue&style=flat-square&url=https%3A%2F%2Fraw.githubusercontent.com%2Falext234%2Fcoronavirus-stats%2Fmaster%2Fdata%2Flast_update.json)
 
-![GitHub watchers](https://img.shields.io/github/watchers/StevenHuang2020/yolov3-custom-pedestrian-detection?label=Watch)
-![GitHub stars](https://img.shields.io/github/stars/StevenHuang2020/yolov3-custom-pedestrian-detection?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/StevenHuang2020/WebSpider?label=Watch)
+![GitHub stars](https://img.shields.io/github/stars/StevenHuang2020/WebSpider?style=social)
