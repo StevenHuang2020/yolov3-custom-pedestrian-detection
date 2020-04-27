@@ -1,5 +1,5 @@
 # Yolov3-custom-pedestrian-detection ![Last update](https://img.shields.io/endpoint?color=blue&style=flat-square&url=https%3A%2F%2Fraw.githubusercontent.com%2FStevenHuang2020%2FWebSpider%2Fmaster%2Fcoronavirus%2Fupdate.json)
-![GitHub watchers](https://img.shields.io/github/downloads/StevenHuang2020/WebSpider/total)
+![GitHub downloads](https://img.shields.io/github/downloads/StevenHuang2020/WebSpider/total?label=Downloads)
 ![GitHub watchers](https://img.shields.io/github/watchers/StevenHuang2020/WebSpider?label=Watch)
 
 
