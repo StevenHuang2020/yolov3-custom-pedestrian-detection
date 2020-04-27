@@ -35,7 +35,7 @@ Darknet config files for training.
 <img src="res/pd2.png" width="320" height="240">
 <img src="res/pd2_detect.png" width="320" height="240">
 
-![Last update](https://img.shields.io/endpoint?color=blue&style=flat-square&url=https%3A%2F%2Fraw.githubusercontent.com%2Falext234%2Fcoronavirus-stats%2Fmaster%2Fdata%2Flast_update.json)
+![Last update](https://img.shields.io/endpoint?color=blue&style=flat-square&url=https%3A%2F%2Fraw.githubusercontent.com%2FStevenHuang2020%2FWebSpider%2Fmaster%2Fcoronavirus%2Fupdate.json)
 
 
 ![GitHub watchers](https://img.shields.io/github/downloads/StevenHuang2020/WebSpider/total)
