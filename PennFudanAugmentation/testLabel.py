@@ -1,6 +1,6 @@
 #python3 steve
 #10/04/2020 Penn-Fudan dataset augmentation
-#resizing and cropping
+#test the labels generated through resizing and cropping
 import sys
 import cv2
 import numpy as np 
@@ -67,16 +67,14 @@ def testFileLabel(imgPath,LabelPath,dstRecImgPath):
         writeImg(recImg, destFile)
         #break
     
-
 def main():
-    
     #base = r'.\res\PennFudanPed\trainEx\\'
     base = r'.\res\PennFudanPed\\'
     imgPath = base + 'test_PNGImages'
     LabelPath = base + r'labels\\test_PNGImages'
     dstRecImgPath = base + r'test'
         
-	testFileLabel(imgPath,LabelPath,dstRecImgPath)
+    testFileLabel(imgPath,LabelPath,dstRecImgPath)
            
 if __name__ == '__main__':
     main()

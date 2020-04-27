@@ -34,3 +34,5 @@ Darknet config files for training.
 <img src="res/pd_detect.png" width="320" height="240">
 <img src="res/pd2.png" width="320" height="240">
 <img src="res/pd2_detect.png" width="320" height="240">
+
+![Last update](https://img.shields.io/endpoint?color=blue&style=flat-square&url=https%3A%2F%2Fraw.githubusercontent.com%2Falext234%2Fcoronavirus-stats%2Fmaster%2Fdata%2Flast_update.json)
