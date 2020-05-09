@@ -6,7 +6,7 @@
 ## 📝 Table of Contents
 - [PennFudanAugmentation](#PennFudanAugmentation)
 - [trainPennFudan](#trainPennFudan)
-- [DetectioEeffect](#DetectionEffect)
+- [DetectionEffect](#DetectionEffect)
 
 
 ## PennFudanAugmentation
