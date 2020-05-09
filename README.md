@@ -1,9 +1,12 @@
 # Yolov3-custom-pedestrian-detection 
-![GitHub downloads](https://img.shields.io/github/downloads/StevenHuang2020/yolov3-custom-pedestrian-detection/total?label=Downloads)
-![GitHub watchers](https://img.shields.io/github/watchers/StevenHuang2020/yolov3-custom-pedestrian-detection?label=Watch)
 ![GitHub watchers](https://img.shields.io/github/watchers/StevenHuang2020/yolov3-custom-pedestrian-detection?label=Watch)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ![Python Version](https://img.shields.io/badge/python-v3.6-blue)
+
+## 📝 Table of Contents
+- [PennFudanAugmentation](#PennFudanAugmentation)
+- [trainPennFudan](#trainPennFudan)
+- [Detection effect](#Detection effect)
 
 
 ## PennFudanAugmentation
