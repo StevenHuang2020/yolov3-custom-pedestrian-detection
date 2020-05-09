@@ -6,7 +6,7 @@
 ## 📝 Table of Contents
 - [PennFudanAugmentation](#PennFudanAugmentation)
 - [trainPennFudan](#trainPennFudan)
-- [Detection effect](#Detection effect)
+- [DetectioEeffect](#DetectionEffect)
 
 
 ## PennFudanAugmentation
@@ -37,7 +37,7 @@ Dataset description after augmentation(5270 sample images).
 ## trainPennFudan
 Darknet config files for training.
 
-## Detection effect 
+## DetectionEffect 
 <br/>
 <img src="res/pd.png" width="320" height="240">
 <img src="res/pd_detect.png" width="320" height="240">
