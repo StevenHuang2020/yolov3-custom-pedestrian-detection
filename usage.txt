@@ -1,0 +1,12 @@
+#wget https://pjreddie.com/media/files/yolov3.weights
+
+#usage
+python yolo_opencv.py --image ./res/nz_street2.jpg --config yolov3.cfg --weights ./yolov3.weights  --classes yolov3.txt -s test.jpg
+python yolo_opencv.py --image ./res/pd.png --config ./darknet-master/trainPennFudan/PF_yolov3-tiny.cfg --weights ./darknet-master/trainPennFudan/backupTiny/PF_yolov3-tiny_900.weights --classes ./darknet-master/trainPennFudan/images/PennFudan.names  -s ./res/pd_dectect.png
+python yolo_opencv.py --config ./darknet-master/trainPennFudan/PF_yolov3-tiny.cfg --weights ./darknet-master/trainPennFudan/backupTiny/PF_yolov3-tiny_60000.weights --classes ./darknet-master/trainPennFudan/images/PennFudan.names  --image ./res/2.jpg
+python yolo_opencv.py --config ./darknet-master/trainPennFudan/PF_yolov3-tiny.cfg --weights ./darknet-master/trainPennFudanEx/PF_yolov3-tiny_20000.weights --classes ./darknet-master/trainPennFudan/images/PennFudan.names  --image ./res/3.jpg
+
+#batch detect image
+python .\yolo_opencvPath.py -c ./darknet-master/trainPennFudan/PF_yolov3-tiny.cfg --weights ./darknet-master/trainPennFudan/backupTiny/PF_yolov3-tiny_60000.weights --classes ./darknet-master/trainPennFudan/images/PennFudan.names -s ./darknet-master/video/png -d .\darknet-master\video\png\yolo
+python .\yolo_opencvPath.py -c ./darknet-master/trainPennFudan/PF_yolov3-tiny.cfg --weights ./darknet-master/trainPennFudan/backupTiny/PF_yolov3-tiny_170000.weights --classes ./darknet-master/trainPennFudan/images/PennFudan.names -s ./darknet-master/video/drive -d ./darknet-master/video/drive/yolo
+
