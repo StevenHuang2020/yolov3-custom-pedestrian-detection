@@ -71,7 +71,7 @@ def detectionImg(image,net,classes,colors):
     boxes = []
     conf_threshold = 0.5
     nms_threshold = 0.4
-    print('outs=',len(outs))
+    #print('outs=',len(outs))
     for out in outs:
         for detection in out:
             scores = detection[5:]
@@ -79,7 +79,7 @@ def detectionImg(image,net,classes,colors):
             confidence = scores[class_id]
             #print('scores=',scores,'class_id=',class_id,'confidence=',confidence)
             if confidence > 0.5:
-                print('scores=',scores,'class_id=',class_id,'confidence=',confidence)
+                #print('scores=',scores,'class_id=',class_id,'confidence=',confidence)
                 center_x = int(detection[0] * width)
                 center_y = int(detection[1] * height)
                 w = int(detection[2] * width)
@@ -91,8 +91,8 @@ def detectionImg(image,net,classes,colors):
                 boxes.append([x, y, w, h])
 
     indices = cv2.dnn.NMSBoxes(boxes, confidences, conf_threshold, nms_threshold)
-    print('indices=',len(indices))
-    print('class_ids=',class_ids)
+    #print('indices=',len(indices))
+    #print('class_ids=',class_ids)
     for i in indices:
         i = i[0]
         box = boxes[i]
@@ -104,14 +104,16 @@ def detectionImg(image,net,classes,colors):
     
     return image
 
+def getCalsses(file):
+    classes = None
+    with open(file, 'r') as f:
+        classes = [line.strip() for line in f.readlines()]
+    return classes
+
 def main():
     args = cmd_line()
     image = cv2.imread(args.image)
-    
-    classes = None
-    with open(args.classes, 'r') as f:
-        classes = [line.strip() for line in f.readlines()]
-
+    classes = getCalsses(args.classes)
     #colors = np.random.uniform(0, 255, size=(len(classes), 3))
     colors = [200,0,0]
 
