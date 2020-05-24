@@ -38,6 +38,4 @@ Darknet config files for training.
 <br/>
 <img src="res/pd.png" width="320" height="240">
 <img src="res/pd_detect.png" width="320" height="240">
-<img src="res/pd2.png" width="320" height="240">
-<img src="res/pd2_detect.png" width="320" height="240">
 
