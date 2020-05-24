@@ -3,11 +3,16 @@ import cv2
 from yolo_opencv import detectionImg,getCalsses
 
 def InitNet():
-    #weights=r'./darknet-master/trainPennFudan/backupTiny/PF_yolov3-tiny_170000.weights'
-    weights=r'./PF_yolov3-tiny_FinalEx.weights'
-    config=r'./PF_yolov3-tiny.cfg'
-    classFile = r'./PennFudan.names'
-  
+    if 1:
+        #weights=r'./darknet-master/trainPennFudan/backupTiny/PF_yolov3-tiny_170000.weights'
+        weights=r'./PF_yolov3-tiny_FinalEx.weights'
+        config=r'./PF_yolov3-tiny.cfg'
+        classFile = r'./PennFudan.names'
+    else:
+        weights=r'yolov3.weights'
+        config=r'yolov3.cfg'
+        classFile = r'yolov3.txt'
+    
     return getCalsses(classFile), cv2.dnn.readNet(weights, config)
 
 def showCamera():
