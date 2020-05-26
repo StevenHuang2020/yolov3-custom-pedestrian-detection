@@ -81,7 +81,7 @@ def nameFiles(dir,filter=''): #"cpp h txt jpg"
                 yield filename
 				
 def getExtFile(file):
-    return file[file.find('.')+1:]
+    return file[file.rfind('.')+1:]
 
 def getFmtFile(path):
     #/home/User/Desktop/file.txt    /home/User/Desktop/file     .txt

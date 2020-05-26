@@ -26,7 +26,8 @@ def train_test_split(srcPath,label,dstTrainPath,dstTestPath,dstTrainLabels,dstTe
 
 def main():    
     #base = r'.\res\PennFudanPed\trainEx\\'
-    base = r'.\res\PennFudanPed\\'
+    #base = r'.\res\PennFudanPed\\'
+    base = r'.\res\PennFudanPed\trainExSmall\\'
     dstTrainPath = base + r'train_PNGImages'
     dstTestPath = base + r'test_PNGImages'
     dstTrainLabels =  base + r'labels\train_PNGImages'
@@ -42,9 +43,10 @@ def main():
     createPath(dstTestLabels)
     
     imgPathList=[]
-    imgPathList.append((r'.\res\PennFudanPed\PNGImages',r'.\res\PennFudanPed\Label'))
+    #imgPathList.append((r'.\res\PennFudanPed\PNGImages',r'.\res\PennFudanPed\Label'))
     #imgPathList.append((r'.\res\PennFudanPed\NewImagesClip',r'.\res\PennFudanPed\NewImagesClipLabel'))
     #imgPathList.append((r'.\res\PennFudanPed\NewImagesScale',r'.\res\PennFudanPed\NewImagesScaleLabel'))
+    imgPathList.append((r'.\res\PennFudanPed\NewImagesScaleEx',r'.\res\PennFudanPed\NewImagesScaleExLabel'))
     
     for i in imgPathList:
         imgPath = i[0]

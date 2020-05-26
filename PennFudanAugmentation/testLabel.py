@@ -1,6 +1,6 @@
 #python3 steve
 #10/04/2020 Penn-Fudan dataset augmentation
-#test the labels generated through resizing and cropping
+#resizing and cropping
 import sys
 import cv2
 import numpy as np 
@@ -66,14 +66,40 @@ def testFileLabel(imgPath,LabelPath,dstRecImgPath):
         print(destFile)
         writeImg(recImg, destFile)
         #break
-    
+
 def main():
     #base = r'.\res\PennFudanPed\trainEx\\'
-    base = r'.\res\PennFudanPed\\'
+    #base = r'.\res\PennFudanPed\\'
+    base = r'.\res\PennFudanPed\trainExSmall\\'
     imgPath = base + 'test_PNGImages'
     LabelPath = base + r'labels\\test_PNGImages'
     dstRecImgPath = base + r'test'
         
+    '''
+    base = r'E:\python\AI\yolo\darknet-master\trainPennFudan\\'
+    imgPath = base + r'images\\test_PNGImages'
+    LabelPath = base + r'labels\\test_PNGImages'
+    dstRecImgPath = base + r'images\\test'
+    '''
+    
+    '''
+    base = r'.\res\PennFudanPed\\'
+    imgPath = base + 'PNGImages'
+    LabelPath = base + r'Label'
+    dstRecImgPath = base + r'testRaw'
+    '''
+    '''
+    base = r'.\res\PennFudanPed\\'
+    imgPath = base + 'NewImagesScale'
+    LabelPath = base + 'NewImagesScaleLabel'
+    dstRecImgPath = base + r'testClip'
+    '''
+    '''
+    base = r'.\res\PennFudanPed\\'
+    imgPath = base + 'NewImagesScale'
+    LabelPath = base + 'NewImagesScaleLabel'
+    dstRecImgPath = base + r'testScale'
+    '''
     testFileLabel(imgPath,LabelPath,dstRecImgPath)
            
 if __name__ == '__main__':

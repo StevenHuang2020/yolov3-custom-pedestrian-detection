@@ -44,7 +44,7 @@ def resizeImg(img,ratio,coordinates):
         newCoordinates.append((round(Xmin*ratio),round(Ymin*ratio),round(Xmax*ratio),round(Ymax*ratio)))
     return rimg,newCoordinates
 
-def generateByScaling(imgPath,annotPath,dstPath,dstBoundingBoxPath,dstLabelPath,N=20):
+def generateByScaling(imgPath,annotPath,dstPath,dstBoundingBoxPath,dstLabelPath,rStart=0.5,rStop=2,N=20):
      for i in listFile(imgPath):
         imgFile = getFileName(i)
         fAnnot = getImgAnnotFile(annotPath,i)
@@ -54,7 +54,7 @@ def generateByScaling(imgPath,annotPath,dstPath,dstBoundingBoxPath,dstLabelPath,
         coordinates = getFileCoordinates(fAnnot)   
         
         #start generate new images
-        ratios = np.linspace(0.5,2,N)    
+        ratios = np.linspace(rStart,rStop,N)    
         for ratio in ratios:     
             rImg,newCoordinates = resizeImg(img,ratio,coordinates)
             #print(i,'ratio=',ratio,'src=',coordinates,'dst=',newCoordinates)
@@ -72,7 +72,7 @@ def generateByScaling(imgPath,annotPath,dstPath,dstBoundingBoxPath,dstLabelPath,
             newImgAnnotFile = dstLabelPath + '\\' + newImgFile + '.txt'
             writeToAnnotFile(boundingImg.shape[0],boundingImg.shape[1],newImgAnnotFile,newCoordinates)
     
-def augmentationByScaling(basePath,imgPath,annotPath,genNumPerRawImg=20):
+def augmentationByScaling(basePath,imgPath,annotPath,genNumPerRawImg=20,rStart=0.1,rStop=2.0):
     dstPath = basePath + 'NewImagesScale'
     dstBoundingBoxPath = basePath + 'NewImagesScaleBounding'
     dstLabelPath = basePath + 'NewImagesScaleLabel'
@@ -80,7 +80,7 @@ def augmentationByScaling(basePath,imgPath,annotPath,genNumPerRawImg=20):
     createPath(dstPath)
     createPath(dstBoundingBoxPath)
     createPath(dstLabelPath)
-    generateByScaling(imgPath,annotPath,dstPath,dstBoundingBoxPath,dstLabelPath,genNumPerRawImg)
+    generateByScaling(imgPath,annotPath,dstPath,dstBoundingBoxPath,dstLabelPath,rStart,rStop,genNumPerRawImg)
 
 def getBoundaryCoordinate(coordinates):
     x_min,y_min,x_max,y_max = coordinates[0]
@@ -138,6 +138,15 @@ def augmentationByClipping(basePath,imgPath,annotPath,genNumPerRawImg=10):
 
     generateByClipping(imgPath,annotPath,dstPath,dstBoundingBoxPath,dstLabelPath,genNumPerRawImg)
            
+def augmentationByScalingEx(basePath,imgPath,annotPath,N=30):
+    dstPath = basePath + 'NewImagesScaleEx'
+    dstBoundingBoxPath = basePath + 'NewImagesScaleExBounding'
+    dstLabelPath = basePath + 'NewImagesScaleExLabel'
+    
+    createPath(dstPath)
+    createPath(dstBoundingBoxPath)
+    createPath(dstLabelPath)
+    generateByScaling(imgPath,annotPath,dstPath,dstBoundingBoxPath,dstLabelPath,rStart=0.1,rStop=0.6,N=N)
 
 def main():
     base = r'.\res\PennFudanPed\\'
@@ -145,9 +154,11 @@ def main():
     imgPath = base + 'PNGImages'
     dstLabelPath = base + 'Label'
     
-    generateImageLabel(imgPath,annotPath,dstLabelPath)
-    augmentationByScaling(base,imgPath,annotPath,genNumPerRawImg=10)
-    augmentationByClipping(base,imgPath,annotPath,genNumPerRawImg=20)
-           
+    #generateImageLabel(imgPath,annotPath,dstLabelPath)
+    #augmentationByScaling(base,imgPath,annotPath,genNumPerRawImg=10)
+    #augmentationByClipping(base,imgPath,annotPath,genNumPerRawImg=20)
+
+    augmentationByScalingEx(base,imgPath,annotPath)
+    
 if __name__ == '__main__':
     main()
