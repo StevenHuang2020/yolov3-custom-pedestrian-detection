@@ -4,7 +4,7 @@
 import matplotlib.pyplot as plt
 from common import getRowAndColumn
 
-def plotImagList(imgList,nameList,gray=False):
+def plotImagList(imgList,nameList,gray=False,showticks=True):
     nImg = len(imgList)
     nRow,nColumn = getRowAndColumn(nImg)
     
@@ -16,7 +16,10 @@ def plotImagList(imgList,nameList,gray=False):
             plt.imshow(img,cmap="gray")
         else:
             plt.imshow(img)
-
+        
+        if not showticks:
+            ax.set_yticks([])
+            ax.set_xticks([])
     #plt.grid(True)
     plt.tight_layout()
     plt.show()

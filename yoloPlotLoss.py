@@ -38,7 +38,7 @@ def plotLoss(ax,iters,loss,label='',name='PennFudan Training loss'):
     ax.plot(iters,loss,label=label)
     ax.set_xlabel('Iters')
     ax.set_ylabel('Loss')
-    ax.legend()
+    #ax.legend()
      
 def main(argv):
     parser = argparse.ArgumentParser()
