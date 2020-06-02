@@ -1,0 +1,6 @@
+1)Every cfg file define the network structure of YOLOv3. Copy one *.cfg from the folder of darknet.
+2）filters=[4 + 1 + n] * 3, where n is your class count. 
+This modification should be made to the layer preceding each of the YOLO layers. 
+Modify classes=80 to classes=n in each YOLO layer, where n is your class count.
+We will need to update the classes and filters params of [yolo] and [convolutional] 
+layers that are just before the [yolo] layers.
