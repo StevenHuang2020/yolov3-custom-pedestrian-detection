@@ -11,7 +11,7 @@ Darknet yolo: https://pjreddie.com/darknet/yolo/
 <br/>
 Dataset: https://www.cis.upenn.edu/~jshi/ped_html/ 
 <br/>
-The data set contains only 170 samples, so we argument the data set 
+The data set contains only 170 samples, so we expand the dataset 
 by scaling or cropping each image.
 <br/>
 1)genImageBoxLabel: Convert the original annotation to yolov3 label format.
